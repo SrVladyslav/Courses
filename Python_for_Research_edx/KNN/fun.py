@@ -39,7 +39,7 @@ for i in range(len(distances)):
 	distances[i] = distance(p, points[i])
 
 ind = np.argsort(distances)
-print(ind)
+#print(ind)
 
 # algorithm
 def find_nearest_neighbours(p, points, k= 5):
@@ -53,13 +53,13 @@ def find_nearest_neighbours(p, points, k= 5):
 	return ind[:k]
 
 ind = find_nearest_neighbours(p, points, 3)
-print(points[ind])
+#print(points[ind])
 
 # Visualizing the data
 import matplotlib.pyplot as plt 
-plt.plot(points[:,0], points[:,1], 'ro')
-plt.plot(p[0], p[1], 'bo')
-plt.axis([0.5,3.5,0.5,3.5])
+#plt.plot(points[:,0], points[:,1], 'ro')
+#plt.plot(p[0], p[1], 'bo')
+#plt.axis([0.5,3.5,0.5,3.5])
 #plt.show()
 
 
@@ -70,15 +70,6 @@ def knn_predict(p ,points ,outcomes ,k= 5):
 
 outcomes = np.array([0,0,0,0,1,1,1,1,1])
 
-print(knn_predict(np.array([2.5,2.7]), points, outcomes, k=2))
+#print(knn_predict(np.array([2.5,2.7]), points, outcomes, k=2))
 
-print(knn_predict(np.array([1,1]), points, outcomes, k=2))
-
-
-
-
-import random
-
-opc = ['a','b','c','d']
-for i in range(8):
-	print("Pregunta", i+1, ":", random.choice(opc))
+#print(knn_predict(np.array([1,1]), points, outcomes, k=2))
